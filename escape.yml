@@ -24,7 +24,9 @@ description: ""
 
 logo: ""
 
-extends: []
+extends:
+- extension-docker-latest
+- extension-kubespec-latest
 
 # Dependencies. Reference dependencies by their full release ID or use
 # the '@' symbol to resolve versions at build time.
@@ -157,7 +159,7 @@ path: ""
 #
 pre_build: ""
 
-build: ""
+build: build_and_apply.sh
 
 # A script to run after the build.
 #
@@ -184,7 +186,7 @@ test: ""
 
 pre_deploy: ""
 
-deploy: ""
+deploy: build_and_apply.sh
 
 post_deploy: ""
 
@@ -192,7 +194,7 @@ smoke: ""
 
 pre_destroy: ""
 
-destroy: ""
+destroy: destroy.sh
 
 post_destroy: ""
 
