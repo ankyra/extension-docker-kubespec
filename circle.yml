@@ -4,15 +4,13 @@ machine:
 
 dependencies:
   override:
-  - curl https://storage.googleapis.com/escape-releases-eu/escape-v0.17.2.tgz > /home/ubuntu/bin/escape.tgz
+  - curl https://storage.googleapis.com/escape-releases-eu/escape-v0.19.0.tgz > /home/ubuntu/bin/escape.tgz
   - tar -C /home/ubuntu/bin -xvzf /home/ubuntu/bin/escape.tgz
-
-  - "escape deploy kubernetes-provider-latest -d '_/kubernetes-provider' -v kubernetes_kubectl='{\"project_id\": \"lol\"}:'"
 
 compile:
   override:
   - echo "from alpine" > Dockerfile
-  - escape release -v docker_image=test
+  - escape release -v docker_image=test --skip-deploy
 
 test:
   override:

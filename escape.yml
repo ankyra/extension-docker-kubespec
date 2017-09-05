@@ -1,11 +1,11 @@
 name: extension-docker-kubespec
-version: 0.3.@
+version: 0.4.@
 
 extends:
 - extension-docker-latest
 - extension-kubespec-latest
 
-inputs:
+deploy_inputs:
 - id: skip_kubespec
   default: false
   description: "If set to true the kubespecs won't be applied. \n"
