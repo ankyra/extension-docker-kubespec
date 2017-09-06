@@ -5,6 +5,9 @@ extends:
 - extension-docker-latest
 - extension-kubespec-latest
 
+includes:
+- imported_image
+
 deploy_inputs:
 - id: skip_kubespec
   default: false
