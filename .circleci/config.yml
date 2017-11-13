@@ -21,4 +21,4 @@ jobs:
         command: echo "from alpine" > Dockerfile
     - run: 
         name: Build Escape release
-        command: escape release -v docker_image=test --skip-deploy
+        command: escape run release -v docker_image=test --skip-deploy
