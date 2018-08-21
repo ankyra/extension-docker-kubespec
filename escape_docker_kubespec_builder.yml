@@ -5,8 +5,5 @@ extends:
 - docker-builder-latest
 - extension-kubespec-latest
 
-deploy: 
-  inline: |
-    deps/_/docker-builder/deploy.sh
-    deps/_/extension-kubespec/apply_specs.py
+deploy: deploy.sh
 
