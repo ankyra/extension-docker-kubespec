@@ -1,0 +1,6 @@
+name: docker-kubespec-builder
+version: 0.4.@
+
+extends:
+- docker-builder-latest
+- extension-kubespec-latest
